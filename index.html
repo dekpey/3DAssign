@@ -8,9 +8,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+
     <title>Supermarket to-do List</title>
   </head>
   <body>
@@ -84,17 +87,19 @@
 
       <h2>Task Input Form</h2>
 
-      <form>
+      <form id="mainForm">
         <div class="form-group">
-          <label for="AddNewTask">Task Name </label>
+          <label id="taskName" for="AddNewTask">Task Name </label>
           <input
             type="text"
             class="form-control"
             name="AddNewTask"
             placeholder="Add Task"
+            id="taskName"
+            required
           />
 
-          <label for="comment">Description</label>
+          <label id="taskDescription" for="comment">Description</label>
           <textarea class="form-control" rows="5" id="comment"></textarea>
           <label for="dueDate" id="dueDate">Due Date</label>
           <input
@@ -102,6 +107,8 @@
             class="date"
             name="dueDate"
             placeholder="Enter date"
+            id ="dueDate"
+            required
           />
           <br />
           <label for="names">Assign to:</label>
@@ -116,7 +123,7 @@
           <br />
           <div class="btn-group" data-toggle="buttons">
             <span>Status: </span>
-            <label class="radio-inline">
+            <label id="taskStatus"  class="radio-inline">
               <input type="radio" name="options" id="option1" /> To-Do
             </label>
             <label class="radio-inline">
@@ -131,7 +138,7 @@
           </div>
 
           <div>
-            <button type="button" class="btn btn-danger">Submit</button>
+            <button type="submit" class="btn btn-danger">Submit</button>
           </div>
         </div>
       </form>
