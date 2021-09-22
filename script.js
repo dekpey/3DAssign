@@ -27,12 +27,12 @@
 // )
 
 // Initialize a new TaskManager with currentId set to 0
-const taskManager = new TaskManager(0);
+// const taskManager = new TaskManager(0);
 
 // Load the tasks from localStorage
-taskManager.load();
+// taskManager.load();
 // Render the loaded tasks to the page
-taskManager.render();
+// taskManager.render();
 
 // Select the New Task Form
 const form = document.getElementById("mainForm");
@@ -46,7 +46,7 @@ form.addEventListener("submit", (event) => {
   let validateDueDate = document.querySelector("#dueDate");
   let validateStatus = document.querySelector("#taskStatus");
   let validationFail = 0;
-  console.log ("the button works")
+  console.log (validateDueDate)
 
   // Prevent default action
   event.preventDefault();
